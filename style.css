@@ -1,0 +1,49 @@
+
+  h1{
+    padding-left:100px;
+    line-height:50px;
+    font-size: 45px;
+  }
+  .picList{
+    max-width: auto;
+    margin-right:100px;;
+    margin-left:100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  h2{
+    margin-left: 100px;
+    margin-right: auto;
+  }
+  .pic {
+    padding: 10px;         
+    margin:  10px;               
+    width: 300px;    
+    perspective: 1000px;     
+  }
+  .member,
+  .jobcontents1,
+  .schedule,
+  .message1 {
+    width: 300px;
+    height:200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; 
+  }
+  .pic:hover .member,
+  .pic:hover .jobcontents1,
+  .pic:hover .schedule,
+  .pic:hover .message1 {
+    transform: translateY(-10px); /* 浮き上がるエフェクト */
+}
+
+  #news-container {
+    font-style: normal;
+    font-size:larger;
+    color: rgb(17, 17, 94);
+    position: fixed; /* 固定位置に設定 */
+    bottom: 50px; /* 下端から20px */
+    width: 700px; /* 幅を指定（必要に応じて調整） */
+    padding: 10px;
+}
