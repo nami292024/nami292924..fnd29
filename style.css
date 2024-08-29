@@ -1,8 +1,12 @@
-
+/* まず、style.cssにこのルールを書き入れてください。 */
+ 
   h1{
     padding-left:100px;
     line-height:50px;
     font-size: 45px;
+  }
+  span{
+    font-size: 15px;
   }
   .picList{
     max-width: auto;
@@ -37,13 +41,59 @@
   .pic:hover .message1 {
     transform: translateY(-10px); /* 浮き上がるエフェクト */
 }
+.tooltip {
+  display: none; /* 初期状態では非表示 */
+  font-size: medium;
+  position: absolute;
+  top: 50%; /* 画像の上に表示 */
+  left: 50%; /* 中央に配置 */
+  transform: translateX(-50%, -50%); /* 中心点を調整 */
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明の背景 */
+  color: rgb(251, 243, 243);
+  padding: 8px;
+  border-radius: 5px;
+  white-space: nowrap; /* テキストが改行されないようにする */
+  z-index: 10; /* 他の要素の上に表示 */
+  transition: opacity 0.3s ease; /* フェードイン効果 */
+}
+
+.pic:hover .tooltip {
+  display: block; /* マウスオーバーで表示 */
+  opacity: 1; /* フェードイン時の不透明度 */
+}
 
   #news-container {
     font-style: normal;
     font-size:larger;
     color: rgb(17, 17, 94);
-    position: fixed; /* 固定位置に設定 */
+    position: fixed; 
     bottom: 50px; /* 下端から20px */
     width: 700px; /* 幅を指定（必要に応じて調整） */
     padding: 10px;
+}
+.bottomcontainer{
+  display: flex;
+  position: fixed;
+  right: 100px;
+  bottom: 50px; 
+  width: auto; 
+  padding: 10px;
+  color: rgb(4, 4, 4);
+  flex-direction: column; /* 縦に並べる */
+  gap: 15px; /* ボタン間のスペース */
+}
+.buttonunder{
+  padding: 15px 30px;
+  font-size: 16px;
+  color: rgb(11, 11, 11);
+  background-color: #f4f5f7;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.buttonunder:hover {
+  background-color: #b9babf;
+  transform: scale(1.05);
 }
